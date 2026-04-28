@@ -187,17 +187,17 @@ To add a country not currently in the dashboard:
 
 2. Name the file: `TradeData_XXX_YYYY-YYYY.csv` (replace XXX with your country code)
 
-3. Find the country name exactly as written in \ `G20_Military_Expenditure_1949_2025.csv` sheet `Constant (2024) US$`
+3. Find the country name exactly as written in \ `G20_Military_Expenditure_1949_2025.csv` 
 
 4. Add to `COUNTRY_CONFIG` in `app.py`:
 ```python
 "Country Name": {
-    "file_prefix": "TradeData_XXX_",
-    "sipri_row": ROW_NUMBER,
+    "prefix": "TradeData_XXX_",
+    "sipri_name": "Name exactly as in CSV",
     "color": "#HEXCOLOR",
+    "flag": "🏳️",
 }
 ```
-
 ---
 
 ## Limitations
