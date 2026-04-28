@@ -38,11 +38,11 @@ This dashboard gives researchers, policymakers, and defense analysts a free, dat
 
 ## Key Features
 
-- 📊 **19 G20 countries** — full coverage with monthly data 2010–2024
+- 📊 **19 G20 countries** — full coverage with annual data 2010–2024
 - 📈 **Interactive charts** — annual trends, country comparisons, world events timeline
 - 🏆 **Country ranking table** — see which nations are most/least import dependent
 - 📅 **Date range slider** — zoom into any time period
-- 🗂️ **Raw data viewer** — export and inspect monthly data per country
+- 🗂️ **Raw data viewer** — export and inspect annual data per country
 - 🌍 18 major world events — from Arab Spring to NATO expansion, shown on the timeline
 
 ---
@@ -62,33 +62,33 @@ This dashboard gives researchers, policymakers, and defense analysts a free, dat
 
 **Military Expenditure:** SIPRI figures include personnel, operations, and procurement. The ratio therefore measures the share of total military budget going to imported weapons — not pure procurement dependency. This is acknowledged as a methodological limitation.
 
-**Annual to Monthly Conversion:** SIPRI publishes annual figures. These are divided by 12 to align with monthly UN Comtrade data. Each month in a given year receives an equal share of the annual total.
+**Annual Data:** Both UN Comtrade and SIPRI publish annual figures. The dependency ratio is calculated directly year-by-year — no conversion needed. Each data point on the chart represents one full calendar year.
 
 ---
 
 ## G20 Coverage
 
-| Country | Code | SIPRI Row |
+| Country | File Prefix | Region |
 |---|---|---|
-| 🇸🇦 Saudi Arabia | Sau | 193 |
-| 🇺🇸 USA | USA | 78 |
-| 🇨🇳 China | Chn | 105 |
-| 🇮🇳 India | Ind | 100 |
-| 🇩🇪 Germany | Ger | 167 |
-| 🇬🇧 United Kingdom | UK | 180 |
-| 🇫🇷 France | Fra | 166 |
-| 🇯🇵 Japan | Jap | 106 |
-| 🇮🇹 Italy | Ita | 171 |
-| 🇨🇦 Canada | Can | 77 |
-| 🇦🇺 Australia | Aus | 93 |
-| 🇧🇷 Brazil | Bra | 82 |
-| 🇲🇽 Mexico | Mex | 72 |
-| 🇮🇩 Indonesia | Indonesia | 114 |
-| 🇦🇷 Argentina | Arg | 80 |
-| 🇿🇦 South Africa | Afr | 52 |
-| 🇷🇺 Russia | Rus | 157 |
-| 🇰🇷 South Korea | Kor | 108 |
-| 🇹🇷 Türkiye | Tur | 195 |
+| 🇸🇦 Saudi Arabia | TradeData_Sau_ | Middle East |
+| 🇺🇸 USA | TradeData_USA_ | Americas |
+| 🇨🇳 China | TradeData_Chn_ | Asia |
+| 🇮🇳 India | TradeData_Ind_ | Asia |
+| 🇩🇪 Germany | TradeData_Ger_ | Europe |
+| 🇬🇧 United Kingdom | TradeData_UK_ | Europe |
+| 🇫🇷 France | TradeData_Fra_ | Europe |
+| 🇯🇵 Japan | TradeData_Jap_ | Asia |
+| 🇮🇹 Italy | TradeData_Ita_ | Europe |
+| 🇨🇦 Canada | TradeData_Can_ | Americas |
+| 🇦🇺 Australia | TradeData_Aus_ | Asia-Pacific |
+| 🇧🇷 Brazil | TradeData_Bra_ | Americas |
+| 🇲🇽 Mexico | TradeData_Mex_ | Americas |
+| 🇮🇩 Indonesia | TradeData_Indonesia_ | Asia |
+| 🇦🇷 Argentina | TradeData_Arg_ | Americas |
+| 🇿🇦 South Africa | TradeData_Afr_ | Africa |
+| 🇷🇺 Russia | TradeData_Rus_ | Europe |
+| 🇰🇷 South Korea | TradeData_Kor_ | Asia |
+| 🇹🇷 Türkiye | TradeData_Tur_ | Middle East |
 
 *Note: European Union is represented by individual member states (Germany, France, Italy)*
 
@@ -102,7 +102,7 @@ G20-Defense-Import-Dependency/
 ├── app.py                              # Main Streamlit dashboard
 ├── requirements.txt                    # Python dependencies
 ├── README.md                           # This file
-├── SIPRI-Milex-data-1949-2025_v1_2.xlsx  # SIPRI military expenditure database
+├── G20_Military_Expenditure_1949_2025.csv  # SIPRI military expenditure database
 │
 ├── TradeData_Sau_2010-2020.csv         # Saudi Arabia arms imports
 ├── TradeData_Sau_2021-2024.csv
@@ -182,12 +182,12 @@ To add a country not currently in the dashboard:
    - Trade Flow: Exports
    - Partner: [your country]
    - Commodity: 93
-   - Frequency: Monthly
+   - Frequency: **Annual**
    - Period: 2010–2024
 
 2. Name the file: `TradeData_XXX_YYYY-YYYY.csv` (replace XXX with your country code)
 
-3. Find the country's row in `SIPRI-Milex-data-1949-2025_v1_2.xlsx` sheet `Constant (2024) US$`
+3. Find the country name exactly as written in \ `G20_Military_Expenditure_1949_2025.csv` sheet `Constant (2024) US$`
 
 4. Add to `COUNTRY_CONFIG` in `app.py`:
 ```python
