@@ -43,7 +43,7 @@ This dashboard gives researchers, policymakers, and defense analysts a free, dat
 - 🏆 **Country ranking table** — see which nations are most/least import dependent
 - 📅 **Date range slider** — zoom into any time period
 - 🗂️ **Raw data viewer** — export and inspect annual data per country
-- 🌍 18 major world events — from Arab Spring to NATO expansion, shown on the timeline
+- 🌍 **18 major world events** — from Arab Spring to NATO expansion, shown on the timeline
 
 ---
 
