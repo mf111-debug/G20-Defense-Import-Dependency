@@ -4,7 +4,7 @@
 
 **Author:** Mohammed Farran  
 **Institution:** Rice University — RCEL 506  
-**Live App:** [Defense Import Dependency Dashboard](https://your-streamlit-url-here.streamlit.app)  
+**Live App:** [Defense Import Dependency Dashboard](https://g20-defense-import-dependency-nerr78rngknr6pvh9wjg2x.streamlit.app)  
 **Date:** April 2026
 
 ---
@@ -39,11 +39,11 @@ This dashboard gives researchers, policymakers, and defense analysts a free, dat
 ## Key Features
 
 - 📊 **19 G20 countries** — full coverage with monthly data 2010–2024
-- 📈 **Interactive charts** — trend lines, rolling averages, annual comparisons
+- 📈 **Interactive charts** — annual trends, country comparisons, world events timeline
 - 🏆 **Country ranking table** — see which nations are most/least import dependent
 - 📅 **Date range slider** — zoom into any time period
 - 🗂️ **Raw data viewer** — export and inspect monthly data per country
-- 🇸🇦 **Saudi Arabia focus** — Yemen conflict peak annotation and Vision 2030 marker
+- 🌍 18 major world events — from Arab Spring to NATO expansion, shown on the timeline
 
 ---
 
@@ -51,8 +51,8 @@ This dashboard gives researchers, policymakers, and defense analysts a free, dat
 
 | Source | Variable | Frequency | Period |
 |---|---|---|---|
-| [UN Comtrade](https://comtradeplus.un.org) | Arms imports (HS Chapter 93, USD) | Monthly | 2010–2024 |
-| [SIPRI Military Expenditure Database](https://www.sipri.org/databases/milex) | Military spending (constant 2024 USD millions) | Annual ÷ 12 | 2010–2024 |
+| [UN Comtrade](https://comtradeplus.un.org) | Arms imports (HS Chapter 93, USD) | **Annual** | 2010–2024 |
+| [SIPRI Military Expenditure Database](https://www.sipri.org/databases/milex) | Military spending (constant 2024 USD millions) | **Annual** | 2010–2024 |
 
 ### Important Methodology Notes
 
